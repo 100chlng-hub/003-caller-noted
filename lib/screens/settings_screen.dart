@@ -109,7 +109,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const Center(child: CircularProgressIndicator())
           else
             DropdownButtonFormField<String>(
-              value: _selectedCalendarId,
+              initialValue: _selectedCalendarId,
               decoration: const InputDecoration(
                 labelText: 'Calendario di Destinazione',
                 border: OutlineInputBorder(),
@@ -180,7 +180,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const SizedBox(height: 8),
           DropdownButtonFormField<int>(
-            value: _defaultDuration,
+            initialValue: _defaultDuration,
             decoration: const InputDecoration(
               labelText: 'Durata Standard Appuntamento',
               border: OutlineInputBorder(),

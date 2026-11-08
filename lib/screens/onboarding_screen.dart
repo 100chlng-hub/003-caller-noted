@@ -209,7 +209,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               )
             else
               DropdownButtonFormField<String>(
-                value: _selectedCalendarId,
+                initialValue: _selectedCalendarId,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.event_available),

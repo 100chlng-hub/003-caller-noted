@@ -33,8 +33,6 @@ class _QuickEventModalState extends State<QuickEventModal> {
   bool _isSaving = false;
   String _liveTranscript = '';
 
-  CalendarEventDraft? _draft;
-
   // Form controllers
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _locationController = TextEditingController();
@@ -101,7 +99,6 @@ class _QuickEventModalState extends State<QuickEventModal> {
     );
 
     setState(() {
-      _draft = draft;
       _isProcessingAI = false;
       _titleController.text = draft.title;
       _locationController.text = draft.location ?? '';

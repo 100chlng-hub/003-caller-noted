@@ -12,6 +12,7 @@ dependencies:
   
   # Calendar & Contacts
   device_calendar: ^4.3.2
+  timezone: ^0.9.4
   flutter_contacts: ^1.1.9+2
   
   # Permissions

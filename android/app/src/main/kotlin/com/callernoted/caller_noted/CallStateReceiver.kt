@@ -1,4 +1,4 @@
-package com.callernoted.app
+package com.callernoted.caller_noted
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

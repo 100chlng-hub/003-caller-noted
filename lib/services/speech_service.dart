@@ -22,16 +22,17 @@ class SpeechService {
     final ready = await initialize();
     if (!ready) return;
 
+    final listenOptions = stt.SpeechListenOptions(
+      listenMode: stt.ListenMode.confirmation,
+      cancelOnError: true,
+      partialResults: true,
+    );
+
     await _speech.listen(
       onResult: (result) {
         onResult(result.recognizedWords);
       },
-      localeId: 'it_IT',
-      listenFor: duration,
-      pauseFor: const Duration(seconds: 3),
-      partialResults: true,
-      cancelOnError: true,
-      listenMode: stt.ListenMode.confirmation,
+      listenOptions: listenOptions,
     );
   }
 
