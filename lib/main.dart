@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'models/user_settings.dart';
 import 'services/settings_service.dart';
 import 'screens/onboarding_screen.dart';
@@ -6,6 +7,9 @@ import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize date formatting symbols for Italian locale
+  await initializeDateFormatting('it_IT', null);
 
   final settingsService = SettingsService();
   final settings = await settingsService.loadSettings();
